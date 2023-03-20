@@ -1,25 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
-		int h = sc.nextInt();
-		int m = sc.nextInt();
-		int n = sc.nextInt();
+		int A = scanner.nextInt();
+		int B = scanner.nextInt();
+		int C = scanner.nextInt();
 		
+		int min = (A*60)+B + C;
 		
-		int a = h*60 + m + n;
-		h = a/60;
-		m = a%60;
+		int H = min/60;
+		int M = min%60;
 		
-		
-		if (h>=24) {
-			h= h-24;
+		if( H > 23 ) {
+			H -= 24;
 		}
+			
+		System.out.println(H+" "+M);
 		
-		System.out.println(h + " "+ m);
-
 	}
 }
